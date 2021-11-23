@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Chipá</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img href="deliv" class="deliv" src="Images/delivery.png" alt="Delivery"></aside>
+        <article>
+         <h3>Tu pedido</h3>
+         <div class="order-selected">
+            <img class="chipaclasico" src="" alt="chipaclasico">
+            <div class="order-element-information">
+                <div class="title">
+                </div>
+                <div class="price">
+                </div>
+            </div>
+         </div>
+         <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+             <div class="input-group" col-md-3>
+                <div>
+                    <label for="first-name">Nombre *</label>
+                    <input class="first-name" type="text" placeholder="Nombre" name="first-name" id="first-name" required>
+                </div>
+                <div>
+                    <label for="last-name">Apellido *</label>
+                    <input class="last-name" type="text" placeholder="Apellido" name="last-name" id="last-name"required>
+                </div>
+                <div>
+                    <label for="address">Dirección *</label>
+                    <input class="address" type="text" placeholder="Dirección" name="address" id="address"required>
+                </div>
+                <div>
+                    <label for="province">Provincia *</label>
+                    <input class="province" type="text" placeholder="Provincia" name="province" id="province"required>
+                </div>
+                <div>
+                    <label for="country">País *</label>
+                    <input class="country" type="text" placeholder="País" name="country" id="country"required>
+                </div>
+                <div>
+                    <label for="dept-floor">Depto/Piso</label>
+                    <input class="dept-floor" type="text" placeholder="Depto/Piso" name="dept-floor" id="dept-floor">
+                </div>
+                <div>
+                    <label for="mail">Mail *</label>
+                    <input class="mail" type="text" placeholder="Mail" name="mail" id="mail"required>
+                </div>
+                <div>
+                    <label for="phoneNum">Teléfono *</label>
+                    <input class="phoneNum" type="text" placeholder="Teléfono" name="phoneNum" id="phoneNum"required>
+                </div>
+                <div>
+                    <label for="product" required>Producto *</label>
+                        <select class="product-list" name="product-list" required>
+                            <option value="0" required></option>
+                            <option value="1" required>Chipa clásico</option> 
+                            <option value="2" required>Chipá rosquita</option> 
+                            <option value="2" required>Chipá mbocá</option> 
+                            <option value="2" required>Chipá relleno</option>                         
+                        </select>
+                </div>
+                <div>
+                    <label for="amount">Cantidad *</label>
+                    <input class="amount" type="text" placeholder="en kg" name="amount" id="amount"required>
+                </div>
+             </div>
+             <input class="reset" type="reset" value="Borrar">
+             <input class="submit" type="submit" value="Enviar">
+         </form>
+         <p class="required">* Campo obligatorio</abbr></p>
+         <div>
+            <button class="volver-catalog">
+                <a href="catalogo.html">Volver al Catálogo</a>
+            </button>
+         </div>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", ()=>{
+        const order=localStorage.getItem("order");
+        if (order){
+            const catalogOrder=JSON.parse(order);
+            const orderSelected=document.querySelector(".order-selected");
+            orderSelected.querySelector(".title").innerText=catalogOrder.title;
+            orderSelected.querySelector(".price").innerText=catalogOrder.price;
+            const img=orderSelected.querySelector("img");
+            img.setAttribute("src", `Images/${catalogOrder.id}.jpg`);
+        }
+    });
+</script>
+</html>
