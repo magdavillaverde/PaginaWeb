@@ -113,7 +113,7 @@ h3 {
     font-style: oblique;
     color: rgb(75, 46, 29);
     margin-top: 0.5em;
-    margin-left: 370px;
+    margin-left: 330px;
 } 
 
 .subtitle {
@@ -155,25 +155,25 @@ h3 {
     color: cornsilk;
 }
 
-.img-chipaclasico {
+.img-chipaClasico {
     width: 200px;
     height: 130px;
     display: block;
 }
 
-.img-chiparosquita {
+.img-chipaRosquita {
     width: 200px;
     height: 130px;
     display: block;
 }
 
-.img-chiparelleno {
+.img-chipaRelleno {
     width: 200px;
     height: 130px;
     display: block;
 }
 
-.img-chipamboca {
+.img-chipaMboca {
     width: 200px;
     height: 130px;
     display: block;
@@ -251,23 +251,58 @@ h3 {
     font-size: 0.8em;
 }
 
-.first-name, .address, .mail, .last-name, .province, .country, .dept-floor, .phoneNum, .product, .amount {
-    width: auto;
-    background-color:rgb(243, 239, 183);
-    border: solid 1px rgb(75, 46, 29);
-    border-radius: 3px;
-    box-sizing: auto;
-    text-align: center;
-    font-size: 0.8em;
-}
-
-.product-list {
-    width: auto;
+.first-name, .last-name, .address, .dept-floor, .province, .country, .mail, .phoneNum, .product, .amount {
     background-color:rgb(243, 239, 183);
     border: solid 1px rgb(75, 46, 29);
     border-radius: 3px;
     box-sizing: border-box;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.first-name {
+    margin-left: 13px;
+}
+
+.last-name {
+    margin-left: 12px;
+}
+
+.address {
+    margin-left: 2px;
+}
+
+.dept-floor {
+    margin-left: 1px;
+}
+
+.province {
+    margin-left: 3px;
+}
+
+.country {
+    margin-left: 45px;
+}
+
+.mail {
+    margin-left: 43px;
+}
+
+.phoneNum {
+    margin-left: 8px;
+} 
+
+.amount {
+    margin-left: 5px;
+}
+
+.product-list {
+    width: 180px;
+    background-color:rgb(243, 239, 183);
+    border: solid 1px rgb(75, 46, 29);
+    border-radius: 3px;
     text-align: left;
+    margin-left: 5px;
 }
 
 .reset {
@@ -292,7 +327,7 @@ h3 {
     border-radius: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .volver-catalog {
